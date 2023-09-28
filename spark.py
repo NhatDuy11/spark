@@ -16,4 +16,5 @@ spark = SparkSession.builder \
     .config("write.parquet.compression-codec", "uncompressed") \
     .getOrCreate()
 
-df = spark.sql("SELECT  * FROM local.test.cn16").show()
+if __name__ == '__main__':
+    df = spark.sql("SELECT  * FROM local.test.cn16").show()
