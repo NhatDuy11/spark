@@ -18,3 +18,5 @@ spark = SparkSession.builder \
 
 if __name__ == '__main__':
     df = spark.sql("SELECT  * FROM local.test.cn16").show()
+    df2 = spark.read.option("Header",True).csv(r"C:\Users\Admin\test_pyspark\test.csv").show()
+
